@@ -4,7 +4,7 @@ class Transaction {
   final double? _amount;
   final DateTime? _date;
 
-  Transaction(
+  const Transaction(
       {required String id, String? title, double? amount, DateTime? date})
       : _id = id,
         _title = title,
@@ -12,7 +12,6 @@ class Transaction {
         _date = date;
 
   String get title {
-    if (_title == null) return "";
-    return _title as String;
+    return _title ?? "";
   }
 }
